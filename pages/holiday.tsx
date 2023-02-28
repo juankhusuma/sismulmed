@@ -10,9 +10,9 @@ import { useCollection, useCollectionData } from "react-firebase-hooks/firestore
 const colorCode = {
     "Juan Dharmananda Khusuma": "bg-[#f66]",
     "Eowyn": "bg-[#ff5]",
-    "Michele Vesakha Lauren": "bg-[#6f6]",
+    "Michelle Vesakha Lauren": "bg-[#6f6]",
     "Venedict Chen": "bg-[#66f]",
-    "Ellena Ashiana Djojo": "bg-[#f6f]"
+    "Ellen Ashiana Djojo": "bg-[#f6f]"
 
 }
 
@@ -93,9 +93,9 @@ export default function Holiday() {
                             <option className={'font-mono'} value="" selected disabled></option>
                             <option className={'font-mono ' + colorCode["Juan Dharmananda Khusuma"]} value="Juan Dharmananda Khusuma">Juan Dharmananda Khusuma</option>
                             <option className={'font-mono ' + colorCode["Eowyn"]} value="Eowyn">Eowyn</option>
-                            <option className={'font-mono ' + colorCode["Michele Vesakha Lauren"]} value="Michele Vesakha Lauren">Michele Vesakha Lauren</option>
+                            <option className={'font-mono ' + colorCode["Michelle Vesakha Lauren"]} value="Michelle Vesakha Lauren">Michelle Vesakha Lauren</option>
                             <option className={'font-mono ' + colorCode["Venedict Chen"]} value="Venedict Chen">Venedict Chen</option>
-                            <option className={'font-mono ' + colorCode["Ellena Ashiana Djojo"]} value="Ellena Ashiana Djojo">Ellena Ashiana Djojo</option>
+                            <option className={'font-mono ' + colorCode["Ellen Ashiana Djojo"]} value="Ellen Ashiana Djojo">Ellen Ashiana Djojo</option>
                         </select>
                     </div>
                     {taskSnapshot && taskSnapshot.docs.length === 0 ?
@@ -129,6 +129,9 @@ export default function Holiday() {
                                 handler,
                                 when: Timestamp.fromDate(when as Date)
                             });
+                            setEvent("")
+                            setHandler("")
+                            setWhen(new Date())
                         } catch (err) { console.log(err) }
                         finally {
                             setLoading(false)
